@@ -6,15 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary:"#8700F2",
-        border:"#D2CAD9",
+        primary:"#55DA62",
+        border:"#CACACA",
         textColor:"#47414B",
-        dark:"#1C052E",
-        background:"#FAFAFA",
+        dark:"#141A15",
+        background:"#FCF5EB",
         muted:"#928D96"
       },
       fontFamily:{
-        aktiv:"aktiv"
+        helvetica:"helvetica"
       }
     },
   },

@@ -10,27 +10,28 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   return (
-    <div className=" border-b border-border  bg-background fixed w-full ">
+    <div className=" bg-background fixed w-full z-10 border-b border-border">
       
       <div className="block md:hidden">
         <button
           onClick={() => {
             window.location.href = "https://wa.me/+255627707434";
           }}
-          className="text-center text-sm py-2 border-b cursor-pointer w-full border-border flex justify-center items-center space-x-1"
+          className="text-center text-sm py-2  cursor-pointer w-full flex justify-center items-center space-x-1"
         >
           <div className="">Order a Website or an App</div>{" "}
           <CiLocationArrow1 className="size-4 " />
         </button>
       </div>
-      <div className="w-11/12  md:w-10/12 mx-auto flex justify-between py-3 md:py-3 ">
+      <div className="w-11/12  md:w-11/12 mx-auto flex justify-between py-3 md:py-3 items-center ">
         <div
-          className="cursor-pointer"
+          className="cursor-pointer flex space-x-2 items-center "
           onClick={() => {
             navigate("/");
           }}
         >
-          <h1 className="text-lg md:text-xl  font-bold text-dark">
+          <img src="/me.png" className="size-9 rounded-full"/>
+          <h1 className="text-lg md:text-xl  font-medium text-dark">
             Techwithjo
           </h1>
         </div>
@@ -71,7 +72,7 @@ const Navbar = () => {
           )}
         </div>
         <div className="md:block hidden">
-          <div className="flex items-center text-sm space-x-4">
+          <div className="flex items-center space-x-8 font-normal">
             <p
               onClick={() => {
                 navigate("/aboutMe");
@@ -88,7 +89,43 @@ const Navbar = () => {
             >
               Stories
             </p>
-            <p className=" cursor-pointer ">English</p>
+            <p
+              onClick={() => {
+                navigate("/howTo");
+              }}
+              className=" cursor-pointer "
+            >
+              How to do ?
+            </p>
+            <p
+              onClick={() => {
+                navigate("/events");
+              }}
+              className=" cursor-pointer "
+            >
+              Events
+            </p>
+            <p
+              onClick={() => {
+                window.location.href = "https://wa.me/+255627707434";
+              }}
+              className=" cursor-pointer "
+            >
+              Hire Me
+            </p>
+            <p
+              onClick={() => {
+                window.location.href = "https://wa.me/+255627707434";
+              }}
+              className=" cursor-pointer "
+            >
+              Colaboration
+            </p>
+          </div>
+        </div>
+        <div className="md:block hidden">
+          <div className="flex items-center ">
+           
           <Subscribe/>
           </div>
         </div>

@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react";
-import { getStories } from "../controllers/contentsController";
+import { getEvents } from "../controllers/contentsController";
 import { timeAgo } from "../utils/timeAgo";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { categories } from "../utils/arrays";
 
-const ContentsPage = () => {
+const EventsPage = () => {
   const [contents, setContents] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    getStories().then((data) => {
+    getEvents().then((data) => {
       setContents(data);
     });
   }, []);
   const [selectedtab, setselectedtab] = useState(0);
   const filteredData = contents.filter((item)=>selectedtab!=0?categories[selectedtab]==item.category:true)
+
   return (
-    (
+     (
       <div>
 
         <div className="w-11/12 md:w-8/12 mx-auto">
           <div className="flex space-x-1 justify-end pt-12">
             {categories.map((item, index) => {
               return (
-                <div onClick={()=>{
+                <div
+                onClick={()=>{
                     setselectedtab(index)
                 }}
                   className={`${
@@ -35,12 +37,12 @@ const ContentsPage = () => {
               );
             })}
           </div>
-          <h1 className="text-7xl text-center py-12">Tech Stories</h1>
+          <h1 className="text-7xl text-center py-12">Tech Events</h1>
 
           {filteredData.length > 0 && (
             <div className=" cursor-pointer" onClick={()=>{
                 navigate(
-                   `/read/${filteredData[0].title.replace(/ /g, "-")}-${contents[0].id}`
+                    `/read/${filteredData[0].title.replace(/ /g, "-")}-${filteredData[0].id}`
                   );
             }}>
               <h1 className=" text-base md:text-3xl line-clamp-2 font-medium text-dark">
@@ -52,7 +54,7 @@ const ContentsPage = () => {
                 src={filteredData[0].image}
               />
               <p
-                className=" line-clamp-1 md:line-clamp-2 text-lg mt-3"
+                className=" line-clamp-1 md:line-clamp-2 text-base mt-3"
                 dangerouslySetInnerHTML={{ __html: filteredData[0].description }}
               ></p>
               <button className="  flex space-x-2 items-center mt-3">
@@ -110,4 +112,4 @@ const ContentsPage = () => {
   );
 };
 
-export default ContentsPage;
+export default EventsPage;

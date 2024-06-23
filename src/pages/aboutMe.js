@@ -1,46 +1,137 @@
+import { useState } from "react";
+import { Helmet } from "react-helmet";
+
 const AboutMe = () => {
+  const [selectedtab, setselectedtab] = useState(0);
+
   return (
     <div>
-      <div className="w-11/12 md:w-10/12 mx-auto">
-        <div className="grid grid-cols-12 gap-y-4">
-          <div className=" col-span-12 md:col-span-9 space-y-4  md:pr-4">
-            <h1 className=" text-2xl md:text-3xl  font-bold text-dark ">Who is John Chuma ?</h1>
-            <div className="md:pr-0 pr-28">
-            <img className="rounded-lg  " src="me.png" />
-
-            </div>
-            <p className="text-textColor">
-              My name is John Vedastus Chuma. I am a software developer,
-              blogger, YouTuber, and influencer. Currently, I work as a software
-              developer at Smart Africa Group in Tanzania. My coding journey
-              began in 2021, and since then, I have gained experience working
-              with various startups, including Silabu and ShuleYetu. Now, I am
-              proud to be part of the team at Smart Africa Group, one of the
-              leading companies in the region. Through my work and online
-              presence, I aim to inspire and educate others about the world of
-              technology and software development.
-            </p>
-            <div className="space-y-2">
-              <h1 className="font-bold text-lg text-dark ">Hobbies</h1>
-              <p className="text-textColor">
-                In my free time, I have a variety of hobbies that keep me
-                engaged and balanced. I enjoy fitness exercises, which help me
-                stay healthy and focused. Music is another passion of mine; I
-                find it both relaxing and inspiring. Coding is not just my
-                profession but also a hobby that I deeply enjoy, allowing me to
-                continuously learn and create. I have a keen interest in
-                business, exploring new ideas and strategies that can drive
-                success. Lastly, reading is one of my favorite pastimes,
-                providing me with knowledge and new perspectives.
-              </p>
+      <Helmet>
+        <title>{"Who is John Vedastus Chuma ?"}</title>
+        <meta
+          name="description"
+          content={`John Vedastus Chuma is a multifaceted professional with a
+                  robust presence in the technology and digital content creation
+                  fields. He works as a software developer at Smart Africa Group
+                  in Tanzania, a leading company in the region. His journey into
+                  coding started in 2021, and since then, he has accumulated
+                  significant experience by working with various startups,
+                  including Silabu and ShuleYetu. In addition to his
+                  professional role, John is an active blogger and YouTuber,
+                  utilizing his online platforms to inspire and educate others
+                  about technology and software development. His passion for
+                  tech extends beyond his career, making coding a hobby he
+                  thoroughly enjoys.`}
+        />
+      </Helmet>
+      <div className="w-11/12 md:w-8/12 mx-auto">
+        <div className="flex space-x-1 justify-end pt-12">
+          {["General", "Skills", "Contacts"].map((item, index) => {
+            return (
+              <div
+                onClick={() => {
+                  setselectedtab(index);
+                }}
+                className={`${
+                  selectedtab == index && "border border-dark "
+                } bg-opacity-10 cursor-pointer rounded-full py-1 px-6`}
+              >
+                {item}
+              </div>
+            );
+          })}
+        </div>
+        {selectedtab == 0 && (
+          <div>
+            <h1 className="text-7xl text-center py-12">Who is John Chuma ?</h1>
+            <div className="grid grid-cols-12 gap-y-4">
+              <div className=" col-span-12 md:col-span-12 space-y-4  md:pr-4">
+                <div className="md:pr-0 pr-28">
+                  <img className="rounded  " src="me.png" />
+                </div>
+                <p className="">
+                  John Vedastus Chuma is a multifaceted professional with a
+                  robust presence in the technology and digital content creation
+                  fields. He works as a software developer at Smart Africa Group
+                  in Tanzania, a leading company in the region. His journey into
+                  coding started in 2021, and since then, he has accumulated
+                  significant experience by working with various startups,
+                  including Silabu and ShuleYetu. In addition to his
+                  professional role, John is an active blogger and YouTuber,
+                  utilizing his online platforms to inspire and educate others
+                  about technology and software development. His passion for
+                  tech extends beyond his career, making coding a hobby he
+                  thoroughly enjoys.
+                </p>
+                <div className="space-y-2">
+                  <h1 className="font-medium text-2xl text-dark ">Hobbies</h1>
+                  <p className="">
+                    Outside of his professional interests, John engages in
+                    several hobbies that keep him balanced and motivated. He is
+                    dedicated to fitness exercises for health and focus, finds
+                    relaxation and inspiration in music, and has a deep interest
+                    in business and innovative strategies. Reading is another
+                    one of his favored activities, providing him with continuous
+                    learning and new perspectives. John Vedastus Chuma
+                    exemplifies a commitment to growth and knowledge, both in
+                    his professional endeavors and personal interests, making a
+                    significant impact in the tech community and beyond.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className=" col-span-12 md:col-span-3 border-l border-border pl-4">
+        )}
+        {selectedtab == 1 && (
+          <div>
+            <h1 className="text-7xl text-center py-12">Skills?</h1>
+            <p className="">
+              John Vedastus Chuma has developed a diverse skill set through
+              years of programming and coding. His expertise includes:
+            </p>
+            <div className="flex flex-wrap pt-4">
+              {[
+                "React",
+                "Tailwind CSS",
+                "Solidity",
+                " Node JS",
+                "Express",
+                "MySQL",
+                "Mongo DB",
+                "Flutter",
+                "Kotlin",
+                "Firebase",
+                "Git",
+                "AWS",
+              ].map((item) => {
+                return (
+                  <div className=" py-1 px-4 border border-dark  rounded-full me-1 mb-1">
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {selectedtab == 2 && (
+          <div>
+            <h1 className="text-7xl text-center py-12">Contacts?</h1>
+
+            <div className="">
+              <p>johnvchuma@gmail.com</p>
+              <p>+255 627 707 434</p>
+              <p>Dar es salaam, Tanzania</p>
+            </div>
+          </div>
+        )}
+      </div>
+      {/* <div className=" col-span-12 md:col-span-3 border-l border-border pl-4">
           <div className="space-y-2">
             <h1 className="font-bold text-lg text-dark ">Skills</h1>
             <div className="flex flex-wrap">
                 {["React","Tailwind CSS","Solidity"," Node JS", "Express", "MySQL","Mongo DB","Flutter","Kotlin","Firebase","Git","AWS"].map((item)=>{
-                    return <div className="text-sm py-1 px-1 bg-gray-100 rounded-full me-1 mb-1">{item}</div>
+                    return <div className=" py-1 px-1 bg-gray-100 rounded-full me-1 mb-1">{item}</div>
                 })}
             </div>
             </div>
@@ -55,9 +146,7 @@ const AboutMe = () => {
        
 
 
-          </div>
-        </div>
-      </div>
+          </div> */}
     </div>
   );
 };

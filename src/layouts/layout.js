@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { Toaster } from "react-hot-toast";
 
 const Layout = () => {
-    return ( <div className=" font-aktiv bg-background min-h-screen text-textColor">
+    return ( <div className=" font-helvetica bg-background min-h-screen font-regular ">
+        <Toaster position="top-right"/>
         <Navbar/>
         <div className=" py-12 pt-28 md:pt-20">
         <Outlet/>

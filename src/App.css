@@ -3,110 +3,96 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Bold.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-BoldItalic.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueBoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Hairline.ttf') format('truetype');
-  font-weight: 100;
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueHeavy.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-HairlineItalic.ttf') format('truetype');
-  font-weight: 100;
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueHeavyItalic.otf') format('opentype');
+  font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Light.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueLight.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-LightItalic.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueLightItalic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Medium.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueMedium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-MediumItalic.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueMediumItalic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Regular.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueRoman.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-Thin.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueThin.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-ThinItalic.ttf') format('truetype');
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueThinItalic.otf') format('opentype');
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'aktiv';
-  src: url('/public/aktiv/AktivGrotesk-XBold.ttf') format('truetype');
-  font-weight: 800;
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueUltraLight.otf') format('opentype');
+  font-weight: 100;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('/public/helvetica/HelveticaNeueUltraLightItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
 }
 
 .form-style{
-  @apply py-2 rounded  w-full focus:border-primary focus:ring-primary border-border bg-gray-50 text-sm
+  @apply py-4 rounded w-full focus:border-primary focus:ring-primary border-dark bg-transparent ;
 }
