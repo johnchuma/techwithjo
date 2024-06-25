@@ -19,8 +19,8 @@ const ContentsPage = () => {
     (
       <div>
 
-        <div className="w-11/12 md:w-8/12 mx-auto">
-          <div className="flex space-x-1 justify-end pt-12">
+        <div className="w-11/12 md:w-8/12 2xl:w-7/12 mx-auto">
+          <div className="flex space-x-1 justify-end pt-0 md:pt-12">
             {categories.map((item, index) => {
               return (
                 <div onClick={()=>{
@@ -28,14 +28,14 @@ const ContentsPage = () => {
                 }}
                   className={`${
                     selectedtab == index && "border border-dark "
-                  } bg-opacity-10 cursor-pointer rounded-full py-1 px-4`}
+                  } bg-opacity-10 cursor-pointer rounded-full py-1 text-sm md:text-base px-2 md:px-4`}
                 >
                   {item}
                 </div>
               );
             })}
           </div>
-          <h1 className="text-7xl text-center py-12">Tech Stories</h1>
+          <h1 className=" text-4xl md:text-7xl text-center py-6 md:py-12">Tech Stories</h1>
 
           {filteredData.length > 0 && (
             <div className=" cursor-pointer" onClick={()=>{
@@ -43,7 +43,7 @@ const ContentsPage = () => {
                    `/read/${filteredData[0].title.replace(/ /g, "-")}-${contents[0].id}`
                   );
             }}>
-              <h1 className=" text-base md:text-3xl line-clamp-2 font-medium text-dark">
+              <h1 className=" text-2xl md:text-3xl line-clamp-2 font-medium text-dark">
                 {filteredData[0].title}
               </h1>
 
@@ -81,10 +81,10 @@ const ContentsPage = () => {
                     </div>
                     <div className=" col-span-8  md:space-y-2">
                         <div className="flex justify-between">
-                        <h1 className=" text-xl line-clamp-2 w-8/12 font-medium text-dark">
+                        <h1 className=" text-base md:text-xl line-clamp-2 w-8/12 font-medium text-dark">
                         {item.title}
                       </h1> 
-                      <p className=" w-4/12 text-end">{timeAgo(item.createdAt.toDate())}</p>
+                      <p className=" w-4/12 text-sm md:text-base text-end">{timeAgo(item.createdAt.toDate())}</p>
 
                         </div>
                      

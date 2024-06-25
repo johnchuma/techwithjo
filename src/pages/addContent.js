@@ -104,7 +104,7 @@ const AddContent = () => {
             <label className="">Description</label>
 
             <ReactQuill
-              
+              style={{fontSize:20}}
               value={description}
               onChange={setDescription}
               className=" border border-dark rounded focus:border-primary focus:ring-primary text-lg"

@@ -28,7 +28,7 @@ const Subscribe = ({ className }) => {
           className="fixed z-30 inset-0 bg-black bg-opacity-50 text-dark"
         >
           <div className="flex flex-col justify-center items-center w-full h-full">
-            <div className="w-10/12 md:w-4/12 bg-background rounded-2xl mx-auto p-6 md:p-16 flex flex-col shadow-xl justify-center items-center">
+            <div className="w-10/12  md:w-4/12 2xl:w-3/12 bg-background rounded-2xl mx-auto p-6 md:p-16 flex flex-col shadow-xl justify-center items-center">
               <div className="flex justify-end w-full cursor-pointer">
                 <IoIosClose
                   onClick={() => {
@@ -38,7 +38,7 @@ const Subscribe = ({ className }) => {
                 />
               </div>
               <HiOutlineMailOpen className="size-12 text-primary" />
-              <h1 className="text-4xl text-center mt-4">
+              <h1 className=" text-3xl md:text-4xl text-center mt-4">
                 Subscribe to receive daily updates
               </h1>
               <input

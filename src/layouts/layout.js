@@ -7,7 +7,7 @@ const Layout = () => {
     return ( <div className=" font-helvetica bg-background min-h-screen font-regular ">
         <Toaster position="top-right"/>
         <Navbar/>
-        <div className=" py-12 pt-28 md:pt-20">
+        <div className=" py-12 pt-20 md:pt-20">
         <Outlet/>
         </div>
         <Footer/>

@@ -24,8 +24,8 @@ const AboutMe = () => {
                   thoroughly enjoys.`}
         />
       </Helmet>
-      <div className="w-11/12 md:w-8/12 mx-auto">
-        <div className="flex space-x-1 justify-end pt-12">
+      <div className="w-11/12 md:w-8/12 2xl:w-7/12 mx-auto">
+        <div className="flex space-x-1 justify-end  md:pt-12">
           {["General", "Skills", "Contacts"].map((item, index) => {
             return (
               <div
@@ -34,7 +34,7 @@ const AboutMe = () => {
                 }}
                 className={`${
                   selectedtab == index && "border border-dark "
-                } bg-opacity-10 cursor-pointer rounded-full py-1 px-6`}
+                } bg-opacity-10 cursor-pointer rounded-full py-1 px-2 md:text-base text-sm md:px-6`}
               >
                 {item}
               </div>
@@ -43,11 +43,11 @@ const AboutMe = () => {
         </div>
         {selectedtab == 0 && (
           <div>
-            <h1 className="text-7xl text-center py-12">Who is John Chuma ?</h1>
+            <h1 className="text-4xl md:text-7xl text-center py-6 md:py-12">Who is John Chuma ?</h1>
             <div className="grid grid-cols-12 gap-y-4">
               <div className=" col-span-12 md:col-span-12 space-y-4  md:pr-4">
-                <div className="md:pr-0 pr-28">
-                  <img className="rounded  " src="me.png" />
+                <div className=" w-6/12 md:w-full">
+                  <img className="rounded-xl  " src="me.png" alt="John Vedastus Chuma" />
                 </div>
                 <p className="">
                   John Vedastus Chuma is a multifaceted professional with a
@@ -84,7 +84,7 @@ const AboutMe = () => {
         )}
         {selectedtab == 1 && (
           <div>
-            <h1 className="text-7xl text-center py-12">Skills?</h1>
+            <h1 className="text-4xl md:text-7xl text-center py-6 md:py-12">Skills?</h1>
             <p className="">
               John Vedastus Chuma has developed a diverse skill set through
               years of programming and coding. His expertise includes:
@@ -116,7 +116,7 @@ const AboutMe = () => {
 
         {selectedtab == 2 && (
           <div>
-            <h1 className="text-7xl text-center py-12">Contacts?</h1>
+            <h1 className=" text-4xl md:text-7xl text-center py-6 md:py-12">Contacts?</h1>
 
             <div className="">
               <p>johnvchuma@gmail.com</p>

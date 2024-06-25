@@ -7,12 +7,12 @@ const HomePage = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="flex flex-col justify-center relative items-center w-10/12 md:w-11/12 mx-auto  py-20 md:py-0 space-y-6">
-        <img className="rounded-2xl object-cover" src="/background.png" />
-        <div className="absolute w-full h-full flex flex-col justify-center">
-          <div className="p-24">
-            <div className="w-5/12 ">
-              <h1 className="text-6xl text-white font-regular">
+      <div className="flex flex-col justify-center relative items-center w-11/12 md:w-11/12 mx-auto  py-0 md:py-0 ">
+        <img className="rounded-2xl object-cover h-[70vh] md:h-auto" src="/background.png" />
+        <div className="absolute w-full md:w-11/12 2xl:w-10/12 bg-dark bg-opacity-20 md:bg-transparent rounded-2xl bg h-full flex flex-col justify-center">
+          <div className=" px-6 md:px-12">
+            <div className=" w-11/12 md:w-5/12 2xl:w-4/12 ">
+              <h1 className=" text-4xl md:text-6xl text-white font-regular">
                 Learn a Thing or Two about Technology
               </h1>
               <p className="text-white mt-3">
@@ -25,10 +25,10 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="w-8/12 items-center mx-auto  mt-12 py-24">
-        <div className="grid grid-cols-12 items-center ">
-          <div className="col-span-5 space-y-6">
-            <h1 className="text-6xl">Read Amaizing Tech Stories</h1>
+      <div className=" w-10/12 md:w-8/12 2xl:w-7/12   items-center mx-auto   md:mt-12 py-24">
+        <div className="grid grid-cols-12 items-center gap-y-6">
+          <div className="col-span-12 md:col-span-5 space-y-6">
+            <h1 className=" text-4xl md:text-6xl">Read Amaizing Tech Stories</h1>
             <p>
               Discover amazing tech stories that inspire and inform. Dive into
               the latest innovations, breakthrough technologies, and compelling
@@ -40,21 +40,21 @@ const HomePage = () => {
               <AiOutlineArrowRight className="size-4 font-bold" />
             </button>
           </div>
-          <div className=" col-span-2"></div>
-          <div className="col-span-5 ">
+          <div className=" col-span-1 md:col-span-2"></div>
+          <div className=" col-span-11  md:col-span-5 ">
             <img className="" src="/stories.png" />
           </div>
         </div>
       </div>
       <div className=" bg-dark">
-        <div className="w-8/12 items-center mx-auto py-24">
-          <div className="grid grid-cols-12 items-center">
-            <div className="col-span-5 ">
+        <div className=" w-10/12 md:w-8/12 2xl:w-7/12  items-center mx-auto py-24">
+          <div className="grid grid-cols-12 items-center gap-y-6">
+            <div className=" col-span-11 md:col-span-5 order-last md:order-first ">
               <img src="/todo.png" />
             </div>
-            <div className=" col-span-2"></div>
-            <div className="col-span-5 space-y-6 text-white ">
-              <h1 className="text-6xl">
+            <div className=" col-span-1 md:col-span-2"></div>
+            <div className=" col-span-12 md:col-span-5 space-y-6 text-white ">
+              <h1 className=" text-4xl md:text-6xl">
                 Learn how to Do <span className="text-white">Tech</span> stuffs
               </h1>
               <p>
@@ -70,10 +70,10 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="w-8/12 items-center mx-auto  mt-12 py-24">
-        <div className="grid grid-cols-12 items-center ">
-          <div className="col-span-5 space-y-6">
-            <h1 className="text-6xl">
+      <div className=" w-10/12 md:w-8/12 2xl:w-7/12  items-center mx-auto  mt-12 py-24">
+        <div className="grid grid-cols-12 items-center gap-y-6 ">
+          <div className=" col-span-12 md:col-span-5 space-y-6">
+            <h1 className=" text-4xl md:text-6xl">
               Get Tech events updates
             </h1>
             <p>
@@ -85,20 +85,20 @@ const HomePage = () => {
               <AiOutlineArrowRight className="size-4 font-bold" />
             </button>
           </div>
-          <div className=" col-span-2"></div>
-          <div className="col-span-5 ">
+          <div className=" col-span-1 md:col-span-2"></div>
+          <div className=" col-span-11  md:col-span-5 ">
             <img src="/events.png" />
           </div>
         </div>
       </div>
-      <div className="w-8/12 items-center mx-auto  pt-0 py-24">
-        <div className="grid grid-cols-12 items-center ">
-          <div className="col-span-5 ">
+      <div className=" w-10/12 md:w-8/12 2xl:w-7/12  items-center mx-auto  pt-0 py-24">
+        <div className="grid grid-cols-12 items-center gap-y-6 ">
+          <div className=" col-span-11 md:col-span-5 order-last md:order-first ">
             <img src="/website.png" />
           </div>
-        <div className=" col-span-2"></div>
-          <div className="col-span-5 space-y-6">
-            <h1 className="text-6xl">
+        <div className=" col-span-1 md:col-span-2"></div>
+          <div className=" col-span-12 md:col-span-5 space-y-6">
+            <h1 className=" text-4xl md:text-6xl">
             Order a website or an App
             </h1>
             <p>

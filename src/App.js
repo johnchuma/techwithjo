@@ -8,8 +8,6 @@ import ReadStory from "./pages/readContent";
 import EventsPage from "./pages/eventsPage";
 import HowToPage from "./pages/howToPage";
 import ReadContent from "./pages/readContent";
-// import { generateSitemap } from "react-sitemap-generator";
-// import { getSlugs } from "./controllers/contentsController";
 import AddContent from "./pages/addContent";
 
 function App() {
@@ -32,28 +30,3 @@ function App() {
 
 export default App;
 
-// const generateSitemapWithSlugs = async () => {
-//   const slugs = await getSlugs();
-//   generateSitemap({
-//     url: "https://www.techwithjo.com",
-//     routes: [
-//       "/",
-//       "/aboutMe",
-//       "/stories",
-//       "/howTo",
-//       "/events",
-//       {
-//         path: "/read/:uuid",
-//         slugs: { uuid: slugs }, 
-//         priority: 1,
-//         changefreq: "never",
-//       },
-//     ],
-//     output: "./public",
-//     options: {
-//       "/addContent": { ignore: true }
-//     },
-//   });
-// };
-
-// generateSitemapWithSlugs();
