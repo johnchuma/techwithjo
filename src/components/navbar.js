@@ -9,16 +9,21 @@ import Subscribe from "./subscribe";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
+  const [showLine,setShowLine] = useState(false)
   useEffect(()=>{
-    if(showMenu == true){
-      window.onclick = (e)=>{
-        setShowMenu(false)
-      }
+  window.addEventListener("scroll",()=>{
+    if(window.scrollY.valueOf()>100){
+           setShowLine(true)
     }
+    else{
+      setShowLine(false)
+    }
+  })
     
-  },[showMenu])
+  },[])
+
   return (
-    <div className=" bg-background fixed w-full z-10 border-b border-border">
+    <div className={`bg-background fixed w-full z-10  ${showLine&&"border-border border-b"}`}>
       
       {/* <div className="block md:hidden">
         <button
@@ -46,6 +51,7 @@ const Navbar = () => {
         <div className="md:hidden block relative">
           <div
             onClick={() => {
+              console.log(true)
               setShowMenu(!showMenu);
             }}
             className="bg-primary text-dark size-7 border border-dark flex justify-center items-center rounded-md w-10"
@@ -53,10 +59,11 @@ const Navbar = () => {
             <IoIosMenu className=" size-5" />
           </div>
           {showMenu && (
-            <div className="bg-white rounded-lg mt-1 absolute right-0 px-5 py-4 space-y-2 text-sm shadow-lg">
+            <div className="bg-background rounded-2xl mt-1 absolute right-0 px-5 py-4 space-y-2 text-sm shadow-lg">
               <p
               onClick={() => {
                 navigate("/aboutMe");
+                setShowMenu(false)
               }}
               className=" cursor-pointer "
             >
@@ -65,6 +72,8 @@ const Navbar = () => {
             <p
               onClick={() => {
                 navigate("/stories");
+                setShowMenu(false)
+
               }}
               className=" cursor-pointer "
             >
@@ -73,6 +82,8 @@ const Navbar = () => {
             <p
               onClick={() => {
                 navigate("/howTo");
+                setShowMenu(false)
+
               }}
               className=" cursor-pointer "
             >
@@ -81,6 +92,8 @@ const Navbar = () => {
             <p
               onClick={() => {
                 navigate("/events");
+                setShowMenu(false)
+
               }}
               className=" cursor-pointer "
             >
@@ -89,6 +102,8 @@ const Navbar = () => {
             <p
               onClick={() => {
                 window.location.href = "https://wa.me/+255627707434";
+                setShowMenu(false)
+
               }}
               className=" cursor-pointer "
             >

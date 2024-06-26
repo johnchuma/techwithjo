@@ -21,7 +21,8 @@ const EventsPage = () => {
       <div>
 
         <div className="w-11/12 md:w-8/12 2xl:w-7/12 mx-auto">
-          <div className="flex space-x-1 justify-end pt-12">
+        <div className="md:block hidden">
+        <div className="flex space-x-1 justify-end pt-12  ">
             {categories.map((item, index) => {
               return (
                 <div
@@ -37,6 +38,8 @@ const EventsPage = () => {
               );
             })}
           </div>
+        </div>
+          
           <h1 className="text-7xl text-center py-12">Tech Events</h1>
 
           {filteredData.length > 0 && (

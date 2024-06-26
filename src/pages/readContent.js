@@ -50,12 +50,12 @@ const ReadContent = () => {
           <link rel="canonical" href={`https://www.techwithjo/${uuid}`} />
         </Helmet>
         <div className="w-11/12 md:w-7/12 2xl:w-7/12 mx-auto">
-          <div className="flex justify-between items-center md:mt-3">
+          <div className="flex justify-between items-center md:mt-3 pb-6 md:py-12 md:text-base text-sm">
             <button
               onClick={() => {
                 navigate(-1);
               }}
-              className="  flex space-x-2 items-center pb-6 md:py-12"
+              className="  flex space-x-2 items-center "
             >
               <AiOutlineArrowLeft className="size-4 font-bold" />
               <div className="border-b-2 border-primary">Go Back</div>
@@ -68,7 +68,7 @@ const ReadContent = () => {
               <h1 className=" text-3xl md:text-4xl font-medium text-dark">
                 {content.title}
               </h1>
-              <p className="text-dark md:text-base ">
+              <p className="text-dark text-sm md:text-base ">
                 {timeAgo(content.createdAt.toDate())}
               </p>
               <img
@@ -77,7 +77,7 @@ const ReadContent = () => {
                 src={content.image}
               />
               <p
-                className="text-lg"
+                className="md:text-lg"
                 dangerouslySetInnerHTML={{ __html: content.description }}
               ></p>
             </div>

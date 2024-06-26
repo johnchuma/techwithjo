@@ -3,13 +3,14 @@ import Subscribe from "../components/subscribe";
 import { SiBlockchaindotcom } from "react-icons/si";
 import { BsChevronRight } from "react-icons/bs";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { useEffect, useState } from "react";
 const HomePage = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <div>
-      <div className="flex flex-col justify-center relative items-center w-11/12 md:w-11/12 mx-auto  py-0 md:py-0 ">
-        <img className="rounded-2xl object-cover h-[70vh] md:h-auto" src="/background.png" />
-        <div className="absolute w-full md:w-11/12 2xl:w-10/12 bg-dark bg-opacity-20 md:bg-transparent rounded-2xl bg h-full flex flex-col justify-center">
+      <div className="flex flex-col justify-center relative items-center w-11/12 md:w-11/12 mx-auto md:pt-0 2xl:pt-5  py-0 md:py-0 ">
+        <img className="rounded-2xl 2xl:rounded-3xl object-cover h-[70vh] md:h-auto 2xl:h-[80vh] w-full" src="/background.png" />
+        <div className="absolute w-full md:w-11/12 2xl:w-10/12 bg-dark bg-opacity-50 md:bg-transparent rounded-2xl bg h-full flex flex-col justify-center">
           <div className=" px-6 md:px-12">
             <div className=" w-11/12 md:w-5/12 2xl:w-4/12 ">
               <h1 className=" text-4xl md:text-6xl text-white font-regular">
@@ -35,7 +36,9 @@ const HomePage = () => {
               narratives from the tech world. Stay updated and entertained with
               captivating tales of tech advancements and the people behind them
             </p>
-            <button className=" font-medium flex space-x-2 items-center">
+            <button onClick={()=>{
+                navigate('/stories')
+              }} className=" font-medium flex space-x-2 items-center">
               <div className="border-b-2 border-primary">Start Reading</div>
               <AiOutlineArrowRight className="size-4 font-bold" />
             </button>
@@ -62,7 +65,9 @@ const HomePage = () => {
                 guides. From coding and software implementation to the latest
                 tech trends,
               </p>
-              <button className=" font-medium flex space-x-2 items-center">
+              <button onClick={()=>{
+                navigate('/howTo')
+              }} className=" font-medium flex space-x-2 items-center">
                 <div className="border-b-2 border-primary">Start Learning</div>
                 <AiOutlineArrowRight className="size-4 font-bold" />
               </button>
@@ -80,7 +85,9 @@ const HomePage = () => {
               Discover workshops, conferences, and meetups that will help you
               expand your knowledge and network with industry professionals.
             </p>
-            <button className=" font-medium flex space-x-2 items-center">
+            <button onClick={()=>{
+                navigate('/events')
+              }} className=" font-medium flex space-x-2 items-center">
               <div className="border-b-2 border-primary">View Events</div>
               <AiOutlineArrowRight className="size-4 font-bold" />
             </button>
@@ -104,7 +111,9 @@ const HomePage = () => {
             <p>
             Get professional, high-quality design and development tailored to your needs.
             </p>
-            <button className=" font-medium flex space-x-2 items-center">
+            <button onClick={()=>{
+                  window.location.href = "https://wa.me/+255627707434";
+              }} className=" font-medium flex space-x-2 items-center">
               <div className="border-b-2 border-primary">Order Now</div>
               <AiOutlineArrowRight className="size-4 font-bold" />
             </button>

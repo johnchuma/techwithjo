@@ -5,8 +5,8 @@ import moment from "moment";
 const Footer = () => {
     const {pathname} = useLocation()
     const navigate = useNavigate()
-    return ( <div className="bg-dark text-white py-24 ">
-        <div className=" w-10/12 md:w-8/12 2xl:w-7/12 mx-auto grid grid-cols-10 items-start  gap-y-8 md:gap-y-0">
+    return ( <div className="bg-dark text-white py-12 md:py-24 ">
+        <div className=" w-11/12 md:w-8/12 2xl:w-7/12 mx-auto grid grid-cols-10 items-start  gap-y-8 md:gap-y-0">
         <div
           className="cursor-pointe flex space-x-2 items-center col-span-12 md:col-span-4"
           onClick={() => {
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
         
         </div>
-        <div className=" w-10/12 md:w-8/12 2xl:w-7/12 mx-auto items-center mt-8 flex justify-between py-2 border-t-2 border-white border-opacity-20">
+        <div className=" w-11/12 md:w-8/12 2xl:w-7/12 mx-auto items-center mt-8 flex justify-between py-2 border-t-2 border-white border-opacity-20">
             <p className="text-sm">©️{moment(Date.now()).format("yyy")}. Techwithjo</p>
             <Subscribe/>
         </div>

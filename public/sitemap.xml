@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
+  <url>
+    <loc>https://www.techwithjo.com/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/addContent</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/aboutMe</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/stories</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/howTo</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/events</loc>
+    <priority>0.6</priority>
+  </url>
+  <!-- Dynamic Pages -->
+  <url>
+    <loc>https://www.techwithjo.com/read/React:-Anti-patterns-to-avoid-Rme4jTKwe9MnCCB</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/read/Integrating-AI-models-in-Next.js-WkBGGDGMr8IwnNO</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.techwithjo.com/read/React:-Anti-patterns-to-avoid-Rme4jTKwe9MnCCB</loc>
+    <priority>1.0</priority>
+  </url>
+</urlset>
