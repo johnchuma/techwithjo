@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#55DA62" />
+    <meta name="theme-color" content="#FCF5EB" />
     <meta name="description" content="Learn a thing or Two about Technology" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,8 +28,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>techwithjo</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "MeMcQVi2ahZZslaG_",
+        });
+      })();
+    </script>
   </head>
-  <body style="font-family:Inter, sans-serif;">
+  <body style="font-family: Inter, sans-serif">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

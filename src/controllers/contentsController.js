@@ -5,12 +5,13 @@ import {setDoc,doc, Timestamp, orderBy, getDocs, query, collection, getDoc, wher
 export const addContent = async(data)=>{
     try {
         const id = generateId(15)
-        const response = await setDoc(doc(firestore,"contents",id),{
+         await setDoc(doc(firestore,"contents",id),{
             id,
             createdAt:Timestamp.now(),
             ...data
         })
-        return response;
+      const content  =  await getContent(id)
+        return content;
     } catch (error) {
         console.log(error)
         throw error;

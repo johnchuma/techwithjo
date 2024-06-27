@@ -62,7 +62,7 @@ const ReadContent = () => {
             </button>
             <div>{content.views} Views</div>
           </div>
-
+          
           <div className="grid grid-cols-12">
             <div className=" col-span-12 md:col-span-12 space-y-2 md:space-y-3 ">
               <h1 className=" text-3xl md:text-4xl font-medium text-dark">
@@ -77,7 +77,7 @@ const ReadContent = () => {
                 src={content.image}
               />
               <p
-                className="md:text-lg"
+                className="text-lg"
                 dangerouslySetInnerHTML={{ __html: content.description }}
               ></p>
             </div>

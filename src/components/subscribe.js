@@ -4,6 +4,7 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
 import { addSubscriber } from "../controllers/subscribersController";
 import toast from "react-hot-toast";
+import { sendWelcomeEmail } from "../controllers/emailController";
 
 const Subscribe = ({ className }) => {
   const [show, setShow] = useState(false);
@@ -22,6 +23,7 @@ const Subscribe = ({ className }) => {
             }).then((response)=>{
               setLoading(false)
               toast.success("Subscribed successfully")
+              sendWelcomeEmail(e.target.email.value)
               setShow(false)
             });
           }}

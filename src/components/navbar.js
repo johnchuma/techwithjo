@@ -3,24 +3,34 @@ import { CgMenuRight } from "react-icons/cg";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Subscribe from "./subscribe";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
+  const {pathname} = useLocation()
   const [showLine,setShowLine] = useState(false)
   useEffect(()=>{
-  window.addEventListener("scroll",()=>{
-    if(window.scrollY.valueOf()>100){
-           setShowLine(true)
-    }
-    else{
+    if(pathname != "/"){
+        setShowLine(true)
+    }else{
       setShowLine(false)
     }
-  })
-    
-  },[])
+      window.addEventListener("scroll",()=>{
+        if(pathname == "/"){
+          if(window.scrollY.valueOf()>50){
+            setShowLine(true)
+        }
+        else{
+          setShowLine(false)
+        }
+        }else{
+          setShowLine(true)
+        }
+      
+      })    
+  },[pathname])
 
   return (
     <div className={`bg-background fixed w-full z-10  ${showLine&&"border-border border-b"}`}>

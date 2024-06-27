@@ -5,6 +5,7 @@ import "react-quill/dist/quill.snow.css";
 import { addContent } from "../controllers/contentsController";
 import { getLink } from "../utils/getLink";
 import { categories } from "../utils/arrays";
+import { sendNewsletter } from "../controllers/emailController";
 
 const AddContent = () => {
   const [uploading, setUploading] = useState(false);
@@ -34,6 +35,24 @@ const AddContent = () => {
                 
               };
               addContent(data).then((response) => {
+                console.log(response)
+                const link = `https://www.techwithjo.com/read/${response.title.replace(/ /g,'-')}-${response.id}`
+              //   const image =  <img
+              //   alt="image description"
+              //   src={response.image}
+              //   style="
+              //     border: 0;
+              //     display: block;
+              //     outline: none;
+              //     margin-top:10px;
+              //     border-radius: 10px;
+              //     text-decoration: none;
+              //     height: auto;
+              //     width: 100%;
+              //     font-size: 14px;
+              //   "
+              // />
+                sendNewsletter(response.title,response.image,response.seoDescription,link)
                 e.target.title.value = "";
                 e.target.category.value = "";
                 e.target.type.value = "";
