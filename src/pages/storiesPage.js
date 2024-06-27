@@ -80,7 +80,7 @@ const ContentsPage = () => {
             </div>
           )}
           <div className="grid grid-cols-12 mt-12">
-            <div className=" col-span-12  space-y-5">
+            <div className=" col-span-12  space-y-8">
               {filteredData.map((item,index) => {
                 return index!=0&& (
                   <div

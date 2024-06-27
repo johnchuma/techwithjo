@@ -40,10 +40,13 @@ const ReadContent = () => {
           <meta property="og:site_name" content="@johnvchuma" />
 
           <meta name="author" content="John Vedastus Chuma" />
-          <meta name="keywords" content={content.description.replace(/ /g,", ")} />
+          <meta
+            name="keywords"
+            content={content.description.replace(/ /g, ", ")}
+          />
           <meta
             property="article:published_time"
-            content={moment(content.createdAt.toDate()).format('yyy, MMM DD')}
+            content={moment(content.createdAt.toDate()).format("yyy, MMM DD")}
           />
           <meta property="article:author" content="John Vedastus Chuma" />
           <meta property="article:section" content={content.description} />
@@ -53,6 +56,20 @@ const ReadContent = () => {
           <div className="flex justify-between items-center md:mt-3 pb-6 md:py-12 md:text-base text-sm">
             <button
               onClick={() => {
+                switch (content.type) {
+                  case "Story":
+                    navigate("/stories");
+                    break;
+                  case "Event":
+                    navigate("/events");
+                    break;
+                  case "How to ?":
+                    navigate("/howTo");
+                    break;
+                  default:
+                    navigate('/stories')
+                    break;
+                }
                 navigate(-1);
               }}
               className="  flex space-x-2 items-center "
@@ -62,7 +79,7 @@ const ReadContent = () => {
             </button>
             <div>{content.views} Views</div>
           </div>
-          
+
           <div className="grid grid-cols-12">
             <div className=" col-span-12 md:col-span-12 space-y-2 md:space-y-3 ">
               <h1 className=" text-3xl md:text-4xl font-medium text-dark">
